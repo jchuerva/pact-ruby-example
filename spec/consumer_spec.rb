@@ -5,7 +5,7 @@ describe Consumer do
 
   let(:json_data) do
     {
-      "test" => "NO",
+      "test" => "TestingConsumer",
       "valid_date" => "2013-08-16T15:31:20+10:00",
       "count" => 100
     }
