@@ -9,3 +9,8 @@ I, [2019-03-11T19:12:53.753193 #81563]  INFO -- : Started on port 1234
 I, [2019-03-11T19:12:54.060709 #81563]  INFO -- : Clearing all expectations
 I, [2019-03-11T19:12:54.069438 #81563]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
 D, [2019-03-11T19:12:54.077715 #81563] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:14:14.080227 #81903]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007ff67f161638> on port 1234...
+I, [2019-03-11T19:14:14.193659 #81903]  INFO -- : Started on port 1234
+I, [2019-03-11T19:14:14.520397 #81903]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:14:14.530150 #81903]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:14:14.536782 #81903] DEBUG -- : Supposed to be stopping
