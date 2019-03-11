@@ -1,0 +1,50 @@
+I, [2019-03-11T19:12:54.063433 #81563]  INFO -- : Cleared interactions for example "Client Pact with our provider get json data can process the json payload from the provider"
+I, [2019-03-11T19:12:54.066087 #81563]  INFO -- : Registered expected interaction GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:12:54%20GMT
+D, [2019-03-11T19:12:54.066192 #81563] DEBUG -- : {
+  "description": "a request for json data",
+  "providerState": "data count is > 0",
+  "request": {
+    "method": "get",
+    "path": "/provider.json",
+    "query": "valid_date=Mon,%2011%20Mar%202019%2018:12:54%20GMT"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "test": "NO",
+      "valid_date": "2013-08-16T15:31:20+10:00",
+      "count": 100
+    }
+  }
+}
+I, [2019-03-11T19:12:54.068350 #81563]  INFO -- : Received request GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:12:54%20GMT
+D, [2019-03-11T19:12:54.068447 #81563] DEBUG -- : {
+  "path": "/provider.json",
+  "query": "valid_date=Mon,%2011%20Mar%202019%2018:12:54%20GMT",
+  "method": "get",
+  "headers": {
+    "Accept-Encoding": "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
+    "Accept": "*/*",
+    "User-Agent": "Ruby",
+    "Connection": "close",
+    "Host": "localhost:1234",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2019-03-11T19:12:54.068572 #81563]  INFO -- : Found matching response for GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:12:54%20GMT
+D, [2019-03-11T19:12:54.068639 #81563] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "test": "NO",
+    "valid_date": "2013-08-16T15:31:20+10:00",
+    "count": 100
+  }
+}
+I, [2019-03-11T19:12:54.071812 #81563]  INFO -- : Verifying - interactions matched for example "Client Pact with our provider get json data can process the json payload from the provider"
+I, [2019-03-11T19:12:54.076000 #81563]  INFO -- : Writing pact for Our Provider to /Users/jchuerva/Documents/GitHub/pact-ruby-example/spec/pacts/our_consumer-our_provider.json

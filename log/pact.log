@@ -1,0 +1,11 @@
+# Logfile created on 2019-03-11 19:11:16 +0100 by logger.rb/61378
+I, [2019-03-11T19:11:16.959385 #81506]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fc3d5a244a0> on port 1234...
+I, [2019-03-11T19:11:17.069977 #81506]  INFO -- : Started on port 1234
+I, [2019-03-11T19:11:17.364517 #81506]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:11:17.374227 #81506]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:11:17.381676 #81506] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:12:53.639721 #81563]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007f960fae7480> on port 1234...
+I, [2019-03-11T19:12:53.753193 #81563]  INFO -- : Started on port 1234
+I, [2019-03-11T19:12:54.060709 #81563]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:12:54.069438 #81563]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:12:54.077715 #81563] DEBUG -- : Supposed to be stopping
