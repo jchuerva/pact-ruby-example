@@ -21,13 +21,11 @@ class Client
     data = load_provider_json(query_date)
     ap data
     if data
-      value = 100 / data['count']
       date = Time.parse(data['valid_date'])
-      puts value
       puts date
-      [value, date]
+      date
     else
-      [0, nil]
+      nil
     end
   end
 

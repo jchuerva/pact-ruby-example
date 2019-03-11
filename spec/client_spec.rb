@@ -6,15 +6,14 @@ describe Client do
   let(:json_data) do
     {
       "test" => "NO",
-      "valid_date" => "2013-08-16T15:31:20+10:00",
-      "count" => 100
+      "valid_date" => "2013-08-16T15:31:20+10:00"
     }
   end
   let(:response) { double('Response', :success? => true, :body => json_data.to_json) }
 
   it 'can process the json payload from the provider' do
     allow(HTTParty).to receive(:get).and_return(response)
-    expect(subject.process_data(Time.now.httpdate)).to eql([1, Time.parse(json_data['valid_date'])])
+    expect(subject.process_data(Time.now.httpdate)).to eql Time.parse(json_data['valid_date'])
   end
 
   describe 'Pact with our provider', :pact => true do
@@ -26,7 +25,7 @@ describe Client do
     describe "get json data" do
 
       before do
-        our_provider.given("data count is > 0").
+        our_provider.
         upon_receiving("a request for json data").
         with(method: :get, path: '/provider.json', query: URI::encode('valid_date=' + date)).
         will_respond_with(
@@ -36,7 +35,7 @@ describe Client do
       end
 
       it "can process the json payload from the provider" do
-        expect(subject.process_data(date)).to eql([1, Time.parse(json_data['valid_date'])])
+        expect(subject.process_data(date)).to eql(Time.parse(json_data['valid_date']))
       end
 
     end
