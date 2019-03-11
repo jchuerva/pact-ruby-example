@@ -76,3 +76,49 @@ Running the client with the following rake task against the provider works nicel
              "count" => 1000
     }
 
+Add a spec to test this client:
+
+client_spec.rb:
+
+```ruby
+    require 'spec_helper'
+    require 'client'
+
+
+    describe Client do
+
+
+      let(:json_data) do
+        {
+          "test" => "NO",
+          "date" => "2013-08-16T15:31:20+10:00"
+        }
+      end
+      let(:response) { double('Response', :success? => true, :body => json_data.to_json) }
+
+
+      it 'can process the json payload from the provider' do
+        HTTParty.stub(:get).and_return(response)
+        expect(subject.process_data).to eql(Time.parse(json_data['date']))
+      end
+
+    end
+```
+
+Let's run this spec and see it all pass:
+
+```console
+    $ rake spec
+    /home/ronald/.rvm/rubies/ruby-2.3.0/bin/ruby -I/home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-core-3.4.3/lib:/home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-support-3.4.1/lib /home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-core-3.4.3/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+
+    Client
+    {
+         "test" => "NO",
+         "date" => "2013-08-16T15:31:20+10:00"
+    }
+    2013-08-16 15:31:20
+      can process the json payload from the provider
+
+    Finished in 0.00582 seconds (files took 0.09577 seconds to load)
+    1 example, 0 failures
+```
