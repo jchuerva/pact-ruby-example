@@ -1,6 +1,5 @@
 require 'ap'
 require 'consumer'
-require 'pry'
 
 describe Consumer do
 
