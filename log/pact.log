@@ -26,3 +26,156 @@ I, [2019-03-11T19:17:07.883568 #82268]  INFO -- : Clearing all expectations
 I, [2019-03-11T19:17:07.886362 #82268]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers "Content-Type" which equals "application/json"'
 I, [2019-03-11T19:17:07.886544 #82268]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
 D, [2019-03-11T19:17:07.893711 #82268] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:21:11.982095 #82716]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fe879a05208> on port 1234...
+I, [2019-03-11T19:21:12.090738 #82716]  INFO -- : Started on port 1234
+I, [2019-03-11T19:21:12.260123 #82716]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:21:12.262512 #82716]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has status code 200'
+I, [2019-03-11T19:21:12.262679 #82716]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has status code 200
+I, [2019-03-11T19:21:12.265073 #82716]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:21:12.267280 #82716]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has a matching body'
+I, [2019-03-11T19:21:12.267416 #82716]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has a matching body
+I, [2019-03-11T19:21:12.269728 #82716]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:21:12.272197 #82716]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers "Content-Type" which equals "application/json"'
+I, [2019-03-11T19:21:12.272398 #82716]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
+D, [2019-03-11T19:21:12.278695 #82716] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:22:27.977476 #82970]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fa247111160> on port 1234...
+I, [2019-03-11T19:22:28.085888 #82970]  INFO -- : Started on port 1234
+I, [2019-03-11T19:23:04.982976 #83042]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fefc2355570> on port 1234...
+I, [2019-03-11T19:23:05.093120 #83042]  INFO -- : Started on port 1234
+I, [2019-03-11T19:23:05.214354 #83042]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:23:05.218667 #83042]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has status code 200'
+I, [2019-03-11T19:23:05.218876 #83042]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has status code 200
+I, [2019-03-11T19:23:05.222266 #83042]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:23:05.225588 #83042]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has a matching body'
+I, [2019-03-11T19:23:05.225771 #83042]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has a matching body
+I, [2019-03-11T19:23:05.228750 #83042]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:23:05.232165 #83042]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers "Content-Type" which equals "application/json"'
+I, [2019-03-11T19:23:05.232339 #83042]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
+D, [2019-03-11T19:23:05.240875 #83042] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:24:43.109029 #83181]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007ffca6212f00> on port 1234...
+I, [2019-03-11T19:24:43.220158 #83181]  INFO -- : Started on port 1234
+I, [2019-03-11T19:24:43.549131 #83181]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:24:43.565311 #83181]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:24:43.577265 #83181] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:24:56.649174 #83224]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007f9d8e0cbd08> on port 1234...
+I, [2019-03-11T19:24:56.760396 #83224]  INFO -- : Started on port 1234
+I, [2019-03-11T19:24:57.051634 #83224]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:24:57.061234 #83224]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:24:57.068517 #83224] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:25:30.970607 #83284]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fda2a897db0> on port 1234...
+I, [2019-03-11T19:25:31.078772 #83284]  INFO -- : Started on port 1234
+I, [2019-03-11T19:25:31.292034 #83284]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:25:31.302919 #83284]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:25:31.308558 #83284] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:26:17.434507 #83342]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fcd1c113ac8> on port 1234...
+I, [2019-03-11T19:26:17.543641 #83342]  INFO -- : Started on port 1234
+I, [2019-03-11T19:26:17.790854 #83342]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:26:17.793986 #83342]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:26:17.799754 #83342] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:27:56.589181 #83447]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007faecdbd2ee0> on port 1234...
+I, [2019-03-11T19:27:56.703148 #83447]  INFO -- : Started on port 1234
+I, [2019-03-11T19:27:57.082763 #83447]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:27:57.085221 #83447]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:27:57.089064 #83447] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:28:56.626492 #83645]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fa2a49dbec8> on port 1234...
+I, [2019-03-11T19:28:56.739441 #83645]  INFO -- : Started on port 1234
+I, [2019-03-11T19:28:57.173928 #83645]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:28:57.184318 #83645]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:28:57.192681 #83645] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:29:22.054441 #83689]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fdb74964180> on port 1234...
+I, [2019-03-11T19:29:22.162789 #83689]  INFO -- : Started on port 1234
+I, [2019-03-11T19:29:38.317959 #83734]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fce969b5a48> on port 1234...
+I, [2019-03-11T19:29:38.432226 #83734]  INFO -- : Started on port 1234
+I, [2019-03-11T19:29:57.584729 #83795]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007f8295254968> on port 1234...
+I, [2019-03-11T19:29:57.692911 #83795]  INFO -- : Started on port 1234
+I, [2019-03-11T19:29:57.916337 #83795]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:29:57.929594 #83795]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:29:57.938239 #83795] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:30:08.937966 #83841]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fe337aa0420> on port 1234...
+I, [2019-03-11T19:30:09.050722 #83841]  INFO -- : Started on port 1234
+I, [2019-03-11T19:30:09.224496 #83841]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:30:09.227039 #83841]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:29:57%20GMT returns a response which has status code 200'
+I, [2019-03-11T19:30:09.227151 #83841]  INFO -- : Sending GET request to path: "/provider.json?valid_date=Mon,%2011%20Mar%202019%2018:29:57%20GMT" with headers: {}, see debug logs for body
+D, [2019-03-11T19:30:09.227180 #83841] DEBUG -- : body :
+I, [2019-03-11T19:30:09.298723 #83841]  INFO -- : Received response with status: 200, headers: {"Content-Type"=>"application/json", "Content-Length"=>"63", "X-Content-Type-Options"=>"nosniff"}, see debug logs for body
+D, [2019-03-11T19:30:09.298807 #83841] DEBUG -- : body: {
+  "test": "NO",
+  "valid_date": "2019-03-11T19:30:09+01:00"
+}
+I, [2019-03-11T19:30:09.299737 #83841]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:29:57%20GMT returns a response which has status code 200
+I, [2019-03-11T19:30:09.302865 #83841]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:30:09.307243 #83841]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:29:57%20GMT returns a response which has a matching body
+I, [2019-03-11T19:30:09.310992 #83841]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:30:09.314106 #83841]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:29:57%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
+D, [2019-03-11T19:30:09.320696 #83841] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:31:23.583169 #83911]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007f9a9a960190> on port 1234...
+I, [2019-03-11T19:31:23.697548 #83911]  INFO -- : Started on port 1234
+I, [2019-03-11T19:31:24.103549 #83911]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:31:24.114438 #83911]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:31:24.121746 #83911] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:33:32.829221 #84101]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fe1cbb08150> on port 1234...
+I, [2019-03-11T19:33:32.937502 #84101]  INFO -- : Started on port 1234
+I, [2019-03-11T19:33:33.311118 #84101]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:33:33.319049 #84101]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:33:33.325011 #84101] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:33:53.064845 #84146]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007ffe8b921788> on port 1234...
+I, [2019-03-11T19:33:53.176498 #84146]  INFO -- : Started on port 1234
+I, [2019-03-11T19:33:53.326717 #84146]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:33:53.329646 #84146]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:33:33%20GMT returns a response which has status code 200'
+I, [2019-03-11T19:33:53.329745 #84146]  INFO -- : Sending GET request to path: "/provider.json?valid_date=Mon,%2011%20Mar%202019%2018:33:33%20GMT" with headers: {}, see debug logs for body
+D, [2019-03-11T19:33:53.329773 #84146] DEBUG -- : body :
+I, [2019-03-11T19:33:53.365146 #84146]  INFO -- : Received response with status: 200, headers: {"Content-Type"=>"application/json", "Content-Length"=>"63", "X-Content-Type-Options"=>"nosniff"}, see debug logs for body
+D, [2019-03-11T19:33:53.365213 #84146] DEBUG -- : body: {
+  "test": "NO",
+  "valid_date": "2019-03-11T19:33:53+01:00"
+}
+I, [2019-03-11T19:33:53.365837 #84146]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:33:33%20GMT returns a response which has status code 200
+I, [2019-03-11T19:33:53.368900 #84146]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:33:53.373787 #84146]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:33:33%20GMT returns a response which has a matching body
+I, [2019-03-11T19:33:53.377594 #84146]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:33:53.380134 #84146]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:33:33%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
+D, [2019-03-11T19:33:53.385346 #84146] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:34:20.386081 #84372]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fe572a6be90> on port 1234...
+I, [2019-03-11T19:34:20.497460 #84372]  INFO -- : Started on port 1234
+I, [2019-03-11T19:34:20.791643 #84372]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:34:20.801544 #84372]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:34:20.806196 #84372] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:34:27.605995 #84416]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fd5d83a5038> on port 1234...
+I, [2019-03-11T19:34:27.717795 #84416]  INFO -- : Started on port 1234
+I, [2019-03-11T19:34:27.831659 #84416]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:34:27.834954 #84416]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:34:20%20GMT returns a response which has status code 200'
+I, [2019-03-11T19:34:27.835127 #84416]  INFO -- : Sending GET request to path: "/provider.json?valid_date=Mon,%2011%20Mar%202019%2018:34:20%20GMT" with headers: {}, see debug logs for body
+D, [2019-03-11T19:34:27.835173 #84416] DEBUG -- : body :
+I, [2019-03-11T19:34:27.847787 #84416]  INFO -- : Received response with status: 200, headers: {"Content-Type"=>"application/json", "Content-Length"=>"63", "X-Content-Type-Options"=>"nosniff"}, see debug logs for body
+D, [2019-03-11T19:34:27.847846 #84416] DEBUG -- : body: {
+  "test": "NO",
+  "valid_date": "2019-03-11T19:34:27+01:00"
+}
+I, [2019-03-11T19:34:27.848386 #84416]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:34:20%20GMT returns a response which has status code 200
+I, [2019-03-11T19:34:27.851326 #84416]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:34:27.853626 #84416]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:34:20%20GMT returns a response which has a matching body
+I, [2019-03-11T19:34:27.856611 #84416]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:34:27.859519 #84416]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:34:20%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
+D, [2019-03-11T19:34:27.866365 #84416] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:35:31.605546 #84588]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fd5faa1f298> on port 1234...
+I, [2019-03-11T19:35:31.718489 #84588]  INFO -- : Started on port 1234
+I, [2019-03-11T19:35:32.000599 #84588]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:35:32.008566 #84588]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
+D, [2019-03-11T19:35:32.013907 #84588] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:35:37.128627 #84652]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fefa5110598> on port 1234...
+I, [2019-03-11T19:35:37.239289 #84652]  INFO -- : Started on port 1234
+I, [2019-03-11T19:35:37.410421 #84652]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:35:37.413635 #84652]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT returns a response which has status code 200'
+I, [2019-03-11T19:35:37.413754 #84652]  INFO -- : Sending GET request to path: "/provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT" with headers: {}, see debug logs for body
+D, [2019-03-11T19:35:37.413788 #84652] DEBUG -- : body :
+I, [2019-03-11T19:35:37.427274 #84652]  INFO -- : Received response with status: 200, headers: {"Content-Type"=>"application/json", "Content-Length"=>"63", "X-Content-Type-Options"=>"nosniff"}, see debug logs for body
+D, [2019-03-11T19:35:37.427337 #84652] DEBUG -- : body: {
+  "test": "NO",
+  "valid_date": "2019-03-11T19:35:37+01:00"
+}
+I, [2019-03-11T19:35:37.427903 #84652]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT returns a response which has status code 200
+I, [2019-03-11T19:35:37.430964 #84652]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:35:37.433926 #84652]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT returns a response which has a matching body
+I, [2019-03-11T19:35:37.437547 #84652]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:35:37.440674 #84652]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
+D, [2019-03-11T19:35:37.447178 #84652] DEBUG -- : Supposed to be stopping

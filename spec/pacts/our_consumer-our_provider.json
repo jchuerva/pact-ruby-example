@@ -8,11 +8,10 @@
   "interactions": [
     {
       "description": "a request for json data",
-      "providerState": "data count is > 0",
       "request": {
         "method": "get",
         "path": "/provider.json",
-        "query": "valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT"
+        "query": "valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT"
       },
       "response": {
         "status": 200,
@@ -21,8 +20,13 @@
         },
         "body": {
           "test": "NO",
-          "valid_date": "2013-08-16T15:31:20+10:00",
-          "count": 100
+          "valid_date": "2013-08-16T15:31:20+10:00"
+        },
+        "matchingRules": {
+          "$.body.valid_date": {
+            "match": "regex",
+            "regex": "\\d{4}\\-\\d{2}\\-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\+\\d{2}:\\d{2}"
+          }
         }
       }
     }
