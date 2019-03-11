@@ -1,50 +1,6 @@
-I, [2019-03-11T19:14:14.523545 #81903]  INFO -- : Cleared interactions for example "Client Pact with our provider get json data can process the json payload from the provider"
-I, [2019-03-11T19:14:14.526891 #81903]  INFO -- : Registered expected interaction GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT
-D, [2019-03-11T19:14:14.526993 #81903] DEBUG -- : {
-  "description": "a request for json data",
-  "providerState": "data count is > 0",
-  "request": {
-    "method": "get",
-    "path": "/provider.json",
-    "query": "valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT"
-  },
-  "response": {
-    "status": 200,
-    "headers": {
-      "Content-Type": "application/json"
-    },
-    "body": {
-      "test": "NO",
-      "valid_date": "2013-08-16T15:31:20+10:00",
-      "count": 100
-    }
-  }
-}
-I, [2019-03-11T19:14:14.529221 #81903]  INFO -- : Received request GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT
-D, [2019-03-11T19:14:14.529303 #81903] DEBUG -- : {
-  "path": "/provider.json",
-  "query": "valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT",
-  "method": "get",
-  "headers": {
-    "Accept-Encoding": "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
-    "Accept": "*/*",
-    "User-Agent": "Ruby",
-    "Connection": "close",
-    "Host": "localhost:1234",
-    "Version": "HTTP/1.1"
-  }
-}
-I, [2019-03-11T19:14:14.529409 #81903]  INFO -- : Found matching response for GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT
-D, [2019-03-11T19:14:14.529465 #81903] DEBUG -- : {
-  "status": 200,
-  "headers": {
-    "Content-Type": "application/json"
-  },
-  "body": {
-    "test": "NO",
-    "valid_date": "2013-08-16T15:31:20+10:00",
-    "count": 100
-  }
-}
-I, [2019-03-11T19:14:14.531806 #81903]  INFO -- : Verifying - interactions matched for example "Client Pact with our provider get json data can process the json payload from the provider"
-I, [2019-03-11T19:14:14.535560 #81903]  INFO -- : Writing pact for Our Provider to /Users/jchuerva/Documents/GitHub/pact-ruby-example/spec/pacts/our_consumer-our_provider.json
+I, [2019-03-11T19:17:07.874129 #82268]  INFO -- : Cleared interactions for example "Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has status code 200"
+I, [2019-03-11T19:17:07.877628 #82268]  INFO -- : Verifying - interactions matched for example "Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has status code 200"
+I, [2019-03-11T19:17:07.880528 #82268]  INFO -- : Cleared interactions for example "Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has a matching body"
+I, [2019-03-11T19:17:07.882796 #82268]  INFO -- : Verifying - interactions matched for example "Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has a matching body"
+I, [2019-03-11T19:17:07.885855 #82268]  INFO -- : Cleared interactions for example "Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers \"Content-Type\" which equals \"application/json\""
+I, [2019-03-11T19:17:07.889040 #82268]  INFO -- : Verifying - interactions matched for example "Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers \"Content-Type\" which equals \"application/json\""

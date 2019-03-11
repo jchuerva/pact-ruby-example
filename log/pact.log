@@ -14,3 +14,15 @@ I, [2019-03-11T19:14:14.193659 #81903]  INFO -- : Started on port 1234
 I, [2019-03-11T19:14:14.520397 #81903]  INFO -- : Clearing all expectations
 I, [2019-03-11T19:14:14.530150 #81903]  INFO -- : Verifying interactions for Client Pact with our provider get json data can process the json payload from the provider
 D, [2019-03-11T19:14:14.536782 #81903] DEBUG -- : Supposed to be stopping
+I, [2019-03-11T19:17:07.552701 #82268]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fd194380eb0> on port 1234...
+I, [2019-03-11T19:17:07.667197 #82268]  INFO -- : Started on port 1234
+I, [2019-03-11T19:17:07.871254 #82268]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:17:07.874771 #82268]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has status code 200'
+I, [2019-03-11T19:17:07.875068 #82268]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has status code 200
+I, [2019-03-11T19:17:07.878583 #82268]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:17:07.880881 #82268]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has a matching body'
+I, [2019-03-11T19:17:07.881010 #82268]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which has a matching body
+I, [2019-03-11T19:17:07.883568 #82268]  INFO -- : Clearing all expectations
+I, [2019-03-11T19:17:07.886362 #82268]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers "Content-Type" which equals "application/json"'
+I, [2019-03-11T19:17:07.886544 #82268]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider Given data count is > 0 a request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:14:14%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
+D, [2019-03-11T19:17:07.893711 #82268] DEBUG -- : Supposed to be stopping
