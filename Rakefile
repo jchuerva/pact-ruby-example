@@ -7,7 +7,7 @@ $:.unshift 'lib'
 
 desc 'Run the client'
 task :run_client do
-  require 'consumer'
+  require 'client'
   require 'ap'
-  ap Consumer.new.load_producer_json
+  ap Client.new.load_producer_json
 end
