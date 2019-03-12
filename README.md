@@ -11,7 +11,9 @@ This allows you to test both sides of an integration point using fast unit tests
 
 ## Step 1 - Simple customer calling Provider
 
-Given we have a client that needs to make a HTTP GET request to a sinatra webapp, and requires a response in JSON format. The client would look something like:
+Given we have a client that needs to make a HTTP GET request to a sinatra webapp, and requires a response in JSON format. 
+
+The **client** would look something like:
 
 client.rb:
 
@@ -34,7 +36,8 @@ client.rb:
     end
 ```
 
-and the provider:
+and the **provider**:
+
 provider.rb
 
 ```ruby
@@ -57,24 +60,6 @@ provider.rb
 ```
 
 This provider expects a valid_date parameter in HTTP date format, and then returns some simple json back.
-
-Running the client with the following rake task against the provider works nicely:
-
-```ruby
-    desc 'Run the client'
-    task :run_client => :init do
-      require 'client'
-      require 'ap'
-      ap Client.new.load_provider_json
-    end
-```
-
-    $ rake run_client
-    {
-              "test" => "NO",
-        "valid_date" => "2016-03-20T13:00:11+11:00",
-             "count" => 1000
-    }
 
 Add a spec to test this client:
 
@@ -121,4 +106,45 @@ Let's run this spec and see it all pass:
 
     Finished in 0.00582 seconds (files took 0.09577 seconds to load)
     1 example, 0 failures
+```
+
+Running the integration test between client-provider works nicely:
+
+```console
+puma config.ru
+```
+
+integration_spec.rb
+
+```ruby
+    require 'client'
+    require 'ap'
+
+    $:.unshift 'lib'
+
+
+    RSpec.describe "client request", type: :feature do
+
+      it "integration test", fast: true do
+        ap Client.new.load_provider_json(Time.now)
+
+        expect(ap Client.new.load_provider_json(Time.now)['test']).to eql('NO')
+        expect(ap Client.new.load_provider_json(Time.now)['valid_date']).to match(/\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\+\d{2}:\d{2}/)
+      end
+    end
+```
+Let's run this spec and see it all pass
+
+```console
+client request
+{
+          "test" => "NO",
+    "valid_date" => "2019-03-12T10:05:56+01:00"
+}
+"NO"
+"2019-03-12T10:05:56+01:00"
+  integration test
+
+Finished in 0.01538 seconds (files took 0.53142 seconds to load)
+1 example, 0 failures
 ```
