@@ -169,7 +169,7 @@ end
 
 This defines a consumer and a producer that runs on port 1234.
 
-The spec for the client now has a pact section.
+The spec for the client now replace the previous test by a pact test.
 
 client_spec.rb:
 
@@ -183,14 +183,20 @@ describe 'Pact with our provider', :pact => true do
   describe "get json data" do
 
     before do
-      our_provider.given("data count is > 0").
+        our_provider.
         upon_receiving("a request for json data").
         with(method: :get, path: '/provider.json', query: URI::encode('valid_date=' + date)).
         will_respond_with(
           status: 200,
           headers: {'Content-Type' => 'application/json'},
-          body: json_data )
-    end
+          body: {
+            "test" => "NO",
+            "valid_date" => Pact.term(
+                generate: "2013-08-16T15:31:20+10:00",
+                matcher: /\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\+\d{2}:\d{2}/)
+            }
+          )
+      end
 
     it "can process the json payload from the provider" do
       expect(subject.process_data).to eql(Time.parse(json_data['date']))
@@ -205,27 +211,20 @@ Running this spec still passes, but it creates a pact file which we can use to v
 
 ```console
     $ rake spec
-    /home/ronald/.rvm/rubies/ruby-2.3.0/bin/ruby -I/home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-core-3.4.3/lib:/home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-support-3.4.1/lib /home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-core-3.4.3/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
+    /Users/jchuerva/.rvm/rubies/ruby-2.5.3/bin/ruby -I/Users/jchuerva/.rvm/gems/ruby-2.5.3/gems/rspec-core-3.8.0/lib:/Users/jchuerva/.rvm/gems/ruby-2.5.3/gems/rspec-support-3.8.0/lib /Users/jchuerva/.rvm/gems/ruby-2.5.3/gems/rspec-core-3.8.0/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
 
     Client
-    {
-         "test" => "NO",
-         "date" => "2013-08-16T15:31:20+10:00"
-    }
-    1
-    2013-08-16 15:31:20
-      can process the json payload from the provider
       Pact with our provider
         get json data
     {
-         "test" => "NO",
-         "date" => "2013-08-16T15:31:20+10:00"
+              "test" => "NO",
+        "valid_date" => "2013-08-16T15:31:20+10:00"
     }
-    2013-08-16 15:31:20
+    2013-08-16 15:31:20 +1000
           can process the json payload from the provider
 
-    Finished in 0.12844 seconds (files took 0.17281 seconds to load)
-    2 examples, 0 failures
+    Finished in 0.02011 seconds (files took 0.90429 seconds to load)
+    1 example, 0 failures
 ```
 
 Generated pact file (spec/pacts/our_consumer-our_provider.json):
@@ -244,7 +243,7 @@ Generated pact file (spec/pacts/our_consumer-our_provider.json):
       "request": {
         "method": "get",
         "path": "/provider.json",
-        "query": "valid_date=Sun,%2020%20Mar%202016%2002:07:13%20GMT"
+        "query": "valid_date=Tue,%2030%20Apr%202019%2011:11:42%20GMT"
       },
       "response": {
         "status": 200,
@@ -253,13 +252,21 @@ Generated pact file (spec/pacts/our_consumer-our_provider.json):
         },
         "body": {
           "test": "NO",
-          "date": "2013-08-16T15:31:20+10:00"
+          "valid_date": "2013-08-16T15:31:20+10:00"
+        },
+        "matchingRules": {
+          "$.body.valid_date": {
+            "match": "regex",
+            "regex": "\\d{4}\\-\\d{2}\\-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\+\\d{2}:\\d{2}"
+          }
         }
       }
     }
   ],
   "metadata": {
-    "pactSpecificationVersion": "1.0.0"
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
   }
 }
 ```
@@ -288,4 +295,31 @@ Pact.service_provider "Our Provider" do
 end
 ```
 
-Running the provider verification passes. Awesome, we are all done.
+Checking the rake tasks, we have the `pact:verify ` task to verify the `pact` against the provider
+
+```bash
+> rake -T  
+rake pact:verify                    # Verifies the pact files configured in the pact_helper.rb against this service provider
+```
+
+Running the provider verification passes. 
+
+```bash
+> rake pact:verify                                                                                                                                                               
+SPEC_OPTS='' /Users/jchuerva/.rvm/rubies/ruby-2.5.3/bin/ruby -S pact verify --pact-helper /Users/jchuerva/Documents/GitHub/pact-ruby-example/spec/pact_helper.rb
+INFO: Reading pact at spec/pacts/our_consumer-our_provider.json
+
+Verifying a pact between Our Consumer and Our Provider
+  A request for json data
+    with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT
+      returns a response which
+        has status code 200
+        has a matching body
+        includes headers
+          "Content-Type" which equals "application/json"
+
+1 interaction, 0 failures
+```
+
+
+Awesome, we are all done. :tada:
