@@ -321,5 +321,36 @@ Verifying a pact between Our Consumer and Our Provider
 1 interaction, 0 failures
 ```
 
+## Step 4 - Verify pact still valid after change in provider
+
+Provider include a new field in the answer (eg: field used in other microservice)
+
+```ruby
+JSON.pretty_generate({
+  :test => 'NO',
+  :valid_date => DateTime.now, 
+  :blablabla => "new field"
+})
+```
+
+The contract client-provider in this example should remains valid, since the client is not affected by this new field.
+
+Running the contract tests:
+```bash
+> rake pact:verify
+SPEC_OPTS='' /Users/jchuerva/.rvm/rubies/ruby-2.5.3/bin/ruby -S pact verify --pact-helper /Users/jchuerva/Documents/GitHub/pact-ruby-example/spec/pact_helper.rb
+INFO: Reading pact at spec/pacts/our_consumer-our_provider.json
+
+Verifying a pact between Our Consumer and Our Provider
+  A request for json data
+    with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT
+      returns a response which
+        has status code 200
+        has a matching body
+        includes headers
+          "Content-Type" which equals "application/json"
+
+1 interaction, 0 failures
+```
 
 Awesome, we are all done. :tada:

@@ -12,7 +12,8 @@ class Provider < Sinatra::Base
         valid_time = Time.parse(params[:valid_date])
         JSON.pretty_generate({
           :test => 'NO',
-          :valid_date => DateTime.now
+          :valid_date => DateTime.now,
+          :blablabla => "new field"
         })
       rescue ArgumentError => e
         [400, "\"\'#{params[:valid_date]}\' is not a date\""]
