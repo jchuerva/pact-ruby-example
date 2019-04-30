@@ -92,7 +92,7 @@ client_spec.rb:
 
 Let's run this spec and see it all pass:
 
-```console
+```bash
     $ rake spec
     /home/ronald/.rvm/rubies/ruby-2.3.0/bin/ruby -I/home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-core-3.4.3/lib:/home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-support-3.4.1/lib /home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-core-3.4.3/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
 
@@ -110,7 +110,7 @@ Let's run this spec and see it all pass:
 
 Running the integration test between client-provider works nicely:
 
-```console
+```bash
 puma config.ru
 ```
 
@@ -135,7 +135,7 @@ integration_spec.rb
 ```
 Let's run this spec and see it all pass
 
-```console
+```bash
 client request
 {
           "test" => "NO",
@@ -203,7 +203,7 @@ end
 
 Running this spec still passes, but it creates a pact file which we can use to validate our assumptions on the provider side.
 
-```console
+```bash
     $ rake spec
     /home/ronald/.rvm/rubies/ruby-2.3.0/bin/ruby -I/home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-core-3.4.3/lib:/home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-support-3.4.1/lib /home/ronald/.rvm/gems/ruby-2.3.0@example_pact/gems/rspec-core-3.4.3/exe/rspec --pattern spec/\*\*\{,/\*/\*\*\}/\*_spec.rb
 
@@ -288,4 +288,31 @@ Pact.service_provider "Our Provider" do
 end
 ```
 
-Running the provider verification passes. Awesome, we are all done.
+Checking the rake tasks, we have the `pact:verify ` task to verify the `pact` against the provider
+
+```bash
+> rake -T  
+rake pact:verify                    # Verifies the pact files configured in the pact_helper.rb against this service provider
+```
+
+Running the provider verification passes. 
+
+```bash
+> rake pact:verify                                                                                                                                                               
+SPEC_OPTS='' /Users/jchuerva/.rvm/rubies/ruby-2.5.3/bin/ruby -S pact verify --pact-helper /Users/jchuerva/Documents/GitHub/pact-ruby-example/spec/pact_helper.rb
+INFO: Reading pact at spec/pacts/our_consumer-our_provider.json
+
+Verifying a pact between Our Consumer and Our Provider
+  A request for json data
+    with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT
+      returns a response which
+        has status code 200
+        has a matching body
+        includes headers
+          "Content-Type" which equals "application/json"
+
+1 interaction, 0 failures
+```
+
+
+Awesome, we are all done. :tada:

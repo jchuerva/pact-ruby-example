@@ -179,3 +179,20 @@ I, [2019-03-11T19:35:37.433926 #84652]  INFO -- : Verifying interactions for Ver
 I, [2019-03-11T19:35:37.437547 #84652]  INFO -- : Clearing all expectations
 I, [2019-03-11T19:35:37.440674 #84652]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
 D, [2019-03-11T19:35:37.447178 #84652] DEBUG -- : Supposed to be stopping
+I, [2019-04-30T12:44:34.956873 #42264]  INFO -- : Starting app Our Provider #<Pact::MockService::App:0x00007fa427106328> on port 1234...
+I, [2019-04-30T12:44:35.064605 #42264]  INFO -- : Started on port 1234
+I, [2019-04-30T12:44:35.265532 #42264]  INFO -- : Clearing all expectations
+I, [2019-04-30T12:44:35.268465 #42264]  INFO -- : Running example 'Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT returns a response which has status code 200'
+I, [2019-04-30T12:44:35.268583 #42264]  INFO -- : Sending GET request to path: "/provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT" with headers: {}, see debug logs for body
+D, [2019-04-30T12:44:35.268640 #42264] DEBUG -- : body :
+I, [2019-04-30T12:44:35.287434 #42264]  INFO -- : Received response with status: 200, headers: {"Content-Type"=>"application/json", "Content-Length"=>"63", "X-Content-Type-Options"=>"nosniff"}, see debug logs for body
+D, [2019-04-30T12:44:35.287490 #42264] DEBUG -- : body: {
+  "test": "NO",
+  "valid_date": "2019-04-30T12:44:35+02:00"
+}
+I, [2019-04-30T12:44:35.288477 #42264]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT returns a response which has status code 200
+I, [2019-04-30T12:44:35.291128 #42264]  INFO -- : Clearing all expectations
+I, [2019-04-30T12:44:35.293112 #42264]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT returns a response which has a matching body
+I, [2019-04-30T12:44:35.294933 #42264]  INFO -- : Clearing all expectations
+I, [2019-04-30T12:44:35.296711 #42264]  INFO -- : Verifying interactions for Verifying a pact between Our Consumer and Our Provider A request for json data with GET /provider.json?valid_date=Mon,%2011%20Mar%202019%2018:35:32%20GMT returns a response which includes headers "Content-Type" which equals "application/json"
+D, [2019-04-30T12:44:35.301500 #42264] DEBUG -- : Supposed to be stopping
